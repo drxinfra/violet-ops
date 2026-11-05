@@ -1,0 +1,19 @@
+{
+  "$comment": "Разметка DSL Jenkins поверх грамматики Groovy: блоки пайплайна, шаги и env/params. Строки и комментарии не трогает.",
+  "scopeName": "jenkins.dsl.injection",
+  "injectionSelector": "L:source.groovy -string -comment",
+  "patterns": [
+    {
+      "name": "keyword.control.jenkins.groovy",
+      "match": "\\b(pipeline|agent|environment|options|parameters|triggers|stages|stage|steps|post|always|success|failure|unstable|changed|fixed|regression|aborted|cleanup|when|script|parallel|matrix|axes|axis|tools|input|node|libraries)\\b(?=\\s*[({])"
+    },
+    {
+      "name": "support.function.jenkins.groovy",
+      "match": "\\b(sh|bat|powershell|pwsh|echo|checkout|git|withCredentials|withEnv|timeout|retry|junit|error|archiveArtifacts|stash|unstash|cleanWs|deleteDir|dir|build|readFile|writeFile|fileExists|sleep|waitUntil|catchError|warnError|publishHTML|sshagent|withKubeConfig|withVault|lock|milestone|readJSON|writeJSON|readYaml|writeYaml|httpRequest|emailext|mail|recordIssues|load|libraryResource|usernamePassword|sshUserPrivateKey|booleanParam|choice|cron|pollSCM|buildDiscarder|logRotator|disableConcurrentBuilds|skipDefaultCheckout|timestamps|ansiColor|expression|branch|allOf|anyOf|beforeAgent)\\b(?=\\s*[(\\s'\"{])"
+    },
+    {
+      "name": "variable.language.jenkins.groovy",
+      "match": "\\b(env|params|currentBuild|scm)\\b(?=\\s*\\??\\.)"
+    }
+  ]
+}

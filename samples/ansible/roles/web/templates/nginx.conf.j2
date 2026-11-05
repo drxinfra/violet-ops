@@ -1,0 +1,16 @@
+upstream {{ web_site_name }} {
+{% for u in web_upstreams if u.enabled | default(true) %}
+    server {{ u.host }}:{{ u.port | default(8080) }};
+{% endfor %}
+}
+
+server {
+    listen 80;
+    server_name {{ web_server_names | join(' ') }};
+{% if web_tls_enabled | bool %}
+    return 301 https://$host$request_uri;
+{% else %}
+    location / { proxy_pass http://{{ web_site_name }}; }
+{% endif %}
+    client_max_body_size {{ web_client_max_body }};
+}

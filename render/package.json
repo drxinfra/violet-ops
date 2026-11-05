@@ -1,0 +1,9 @@
+{
+  "name": "violet-ops-render",
+  "private": true,
+  "description": "Рендер образцов кода темой Violet Ops тем же движком, что у VS Code",
+  "dependencies": {
+    "vscode-oniguruma": "2.0.1",
+    "vscode-textmate": "9.2.0"
+  }
+}

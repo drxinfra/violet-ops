@@ -1,0 +1,23 @@
+---
+# Packages and the site name
+web_packages          : ["nginx", "certbot"]
+web_site_name         : "shop"
+web_server_names      : ["shop.example.com", "www.shop.example.com"]
+
+######################################################################
+# TLS: certificates are issued by certbot, renewal runs from a timer.
+# Set web_tls_enabled: false to serve plain HTTP on a test stand.
+######################################################################
+web_tls_enabled       : true
+web_tls_cert          : "/etc/letsencrypt/live/{{ web_site_name }}/fullchain.pem"
+web_client_max_body   : "64m"
+web_firewall_enabled  : true
+web_ports             : [80, 443]
+
+web_upstreams:
+  - host: "10.0.0.11"
+    port: 8080
+    enabled: true
+  - host: "10.0.0.12"
+    port: 8080
+    enabled: false   # drained for maintenance

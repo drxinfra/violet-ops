@@ -1,0 +1,18 @@
+# --------------------------------------------------------------------------
+#  Services of the shop: one Deployment per entry
+# --------------------------------------------------------------------------
+image:
+  registry: "registry.example.com/shop"
+
+services:
+  api:
+    enabled: true
+    replicas: 3
+    image: "api"
+    resources:
+      limits:   { cpu: "1",    memory: "1Gi" }
+      requests: { cpu: "250m", memory: "512Mi" }
+  worker:
+    enabled: false   # queue consumers, off on test stands
+    replicas: 1
+    image: "worker"

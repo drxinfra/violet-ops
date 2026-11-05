@@ -1,0 +1,25 @@
+pipeline {
+    agent { label 'docker' }
+    environment {
+        // Registry and tag are taken from the job parameters
+        IMAGE = "registry.example.com/shop/api:${params.TAG ?: env.BUILD_NUMBER}"
+    }
+    stages {
+        stage('Build') {
+            steps {
+                checkout scm
+                sh "docker build -t ${IMAGE} ."
+            }
+        }
+        stage('Push') {
+            when { expression { params.PUSH } }
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'registry', usernameVariable: 'U', passwordVariable: 'P')]) {
+                    sh 'echo "$P" | docker login -u "$U" --password-stdin registry.example.com'
+                    sh "docker push ${IMAGE}"
+                }
+            }
+        }
+    }
+    post { always { cleanWs(notFailBuild: true) } }
+}

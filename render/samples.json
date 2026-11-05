@@ -1,0 +1,42 @@
+{
+  "frame": {
+    "label": "Ansible · roles/web/tasks/main.yml",
+    "file": "samples/ansible/roles/web/tasks/main.yml",
+    "scope": "source.ansible", "from": 1, "to": 31, "ansible": true, "highlight": 12,
+    "title": "main.yml — infra",
+    "tabs": ["main.yml", "deployment.yaml", "Jenkinsfile"],
+    "crumbs": "ansible › roles › web › tasks › main.yml",
+    "language": "Ansible",
+    "tree": [
+      [0, "▾ INFRA", "bold"], [1, "▾ ansible", ""], [2, "▾ roles", ""], [3, "▾ web", "mod"],
+      [4, "▸ defaults", ""], [4, "▾ tasks", "mod"], [5, "main.yml", "sel"], [5, "tls.yml", "unt"],
+      [4, "▸ templates", ""], [4, "README.md", ""], [3, "▸ db", ""], [3, "▸ monitoring", ""],
+      [1, "▾ helm", ""], [2, "▸ web", ""], [1, "▾ jenkins", ""], [2, "Jenkinsfile", ""],
+      [1, "▸ scripts", ""], [1, "CHANGELOG.md", "mod"]
+    ]
+  },
+  "samples": [
+    {"label": "Ansible · defaults/main.yml", "file": "samples/ansible/roles/web/defaults/main.yml",
+     "scope": "source.ansible", "from": 2, "to": 22},
+    {"label": "Jinja · templates/nginx.conf.j2", "file": "samples/ansible/roles/web/templates/nginx.conf.j2",
+     "scope": "source.ansible-jinja", "from": 1, "to": 16},
+    {"label": "Helm · templates/deployment.yaml", "file": "samples/helm/web/templates/deployment.yaml",
+     "scope": "source.helm", "from": 1, "to": 19},
+    {"label": "Helm · values.yaml", "file": "samples/helm/web/values.yaml",
+     "scope": "source.yaml", "from": 1, "to": 18},
+    {"label": "Jenkinsfile", "file": "samples/jenkins/Jenkinsfile",
+     "scope": "source.groovy", "from": 1, "to": 25},
+    {"label": "Groovy · archive.groovy", "file": "samples/jenkins/archive.groovy",
+     "scope": "source.groovy", "from": 1, "to": 15},
+    {"label": "Shell · rollout.sh", "file": "samples/scripts/rollout.sh",
+     "scope": "source.shell", "from": 1, "to": 13},
+    {"label": "Python · report.py", "file": "samples/scripts/report.py",
+     "scope": "source.python", "from": 1, "to": 17},
+    {"label": "Go · health.go", "file": "samples/scripts/health.go",
+     "scope": "source.go", "from": 10, "to": 29},
+    {"label": "SQL · slow_queries.sql", "file": "samples/scripts/slow_queries.sql",
+     "scope": "source.sql", "from": 1, "to": 13},
+    {"label": "Markdown · CHANGELOG.md", "file": "samples/CHANGELOG.sample.md",
+     "scope": "text.html.markdown", "from": 1, "to": 9}
+  ]
+}

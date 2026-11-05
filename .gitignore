@@ -1,0 +1,6 @@
+extension/
+preview/
+render/node_modules/
+*.vsix
+__pycache__/
+.DS_Store

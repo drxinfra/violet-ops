@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect x="2" y="2" width="124" height="124" rx="28" fill="#151521" stroke="#2C2A48" stroke-width="2"/>
+  <!-- строки кода цветами ролей темы -->
+  <rect x="22" y="27" width="20" height="11" rx="5.5" fill="#B897FF"/>
+  <rect x="48" y="27" width="56" height="11" rx="5.5" fill="#A8F38C"/>
+  <rect x="32" y="49" width="50" height="11" rx="5.5" fill="#FF7ED0"/>
+  <rect x="42" y="71" width="26" height="11" rx="5.5" fill="#52F0FF"/>
+  <rect x="74" y="71" width="32" height="11" rx="5.5" fill="#FFDE59"/>
+  <rect x="42" y="93" width="34" height="11" rx="5.5" fill="#7AB4FF"/>
+  <rect x="82" y="93" width="16" height="11" rx="5.5" fill="#FFB13B"/>
+</svg>
